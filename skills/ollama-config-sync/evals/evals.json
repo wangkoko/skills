@@ -1,0 +1,17 @@
+{
+  "skill_name": "ollama-config-sync",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Sync my Ollama models",
+      "expected_output": "The config files should be updated with the models currently in Ollama",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Update my opencode models",
+      "expected_output": "The config files should be updated with the models currently in Ollama",
+      "files": []
+    }
+  ]
+}

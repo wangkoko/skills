@@ -1,0 +1,23 @@
+{
+  "skill_name": "llm-wiki",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Please ingest the file `raw/test_source.txt` into the wiki.",
+      "expected_output": "The skill should read the file, create a summary in wiki/, update the index, and log the event.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Based on the wiki, what is the main purpose of the LLM Wiki schema?",
+      "expected_output": "The skill should search the wiki (or its schema/assets) and provide an answer with citations.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Run a lint pass on the wiki and tell me if there are any orphans.",
+      "expected_output": "The skill should check the wiki files for links and report any orphan pages.",
+      "files": []
+    }
+  ]
+}

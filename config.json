@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3.6:27b-coding-nvfp4": {
+          "tools": true
+        },
+        "gemma4:latest": {
+          "tools": true
+        },
+        "gemma4:26b": {
+          "tools": true
+        },
+        "qwen2.5-coder:14b": {
+          "tools": true
+        },
+        "nomic-embed-text:latest": {
+          "tools": false
+        }
+      }
+    }
+  }
+}
