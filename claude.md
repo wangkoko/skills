@@ -20,12 +20,9 @@ This file tracks important instructions and learned rules from previous sessions
   4. Always use the active virtual environment for executing Python scripts and running `pip install`.
 
 - **Git & Tool Usage**:
-  - **Git-Commit Skill**: You are authorized to use the `git-commit` skill for any Git repository within the workspace, regardless of its location.
+  - **Git-Commit Skill**: You are authorized to use the `git-commit` skill for any Git repository within the workspace, regardless of its location. **You MUST use the `git-commit` skill for all Git commits instead of using the Bash tool.**
   - **Directory Context**: If the target repository is in a subdirectory (e.g., `./wiki`), you should first change the working directory using `cd <path>` (or use `workdir` in tools) so that the skill operates correctly within that repo's context.
-  - **Direct Execution**: Do not restrict yourself to the current working directory only; prioritize using specialized tools (like `git-commit`) over raw `bash` whenever possible by managing the context.
-
-## Session Logs
-...
+  - **Direct Execution**: Do not restrict yourself to the current working and prioritize using specialized tools (like `git-commit`) over raw `bash` whenever possible by managing the context.
 
 ## Session Logs
 
