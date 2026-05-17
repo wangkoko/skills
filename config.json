@@ -7,16 +7,13 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "qwen3.6:27b-coding-nvfp4": {
+        "qwen3.6:27b-mlx-bf16": {
           "tools": true
         },
         "gemma4:latest": {
           "tools": true
         },
         "gemma4:26b": {
-          "tools": true
-        },
-        "qwen2.5-coder:14b": {
           "tools": true
         },
         "nomic-embed-text:latest": {
