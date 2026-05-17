@@ -21,8 +21,12 @@ This file tracks important instructions and learned rules from previous sessions
 
 - **Git & Tool Usage**:
   - **Git-Commit Skill**: You are authorized to use the `git-commit` skill for any Git repository within the workspace, regardless of its location. **You MUST use the `git-commit` skill for all Git commits instead of using the Bash tool.**
-  - **Directory Context**: If the target repository is in a subdirectory (e.g., `./wiki`), you should first change the working directory using `cd <path>` (or use `workdir` in tools) so that the skill operates correctly within that repo's context.
+  - **Directory Context**: If thetarget repository is in a subdirectory (e.g., `./wiki`), you should first change the working directory using `cd <path>` (or use `workdir` in tools) so that the skill operates correctly within that repo's context.
   - **Direct Execution**: Do not restrict yourself to the current working and prioritize using specialized tools (like `git-commit`) over raw `bash` whenever possible by managing the context.
+
+- **Task Completion Protocol**:
+  - **Final Step**: Upon completion of any multi-step task, you MUST call the `@supervisor` agent.
+  - **Verification**: The task is only considered complete once the `@supervisor` returns `VERDICT: PASS`. If `VERDICT: FAIL` is returned, you must address the listed violations and re-verify.
 
 ## Session Logs
 
