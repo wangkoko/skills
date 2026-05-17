@@ -13,7 +13,19 @@ This file tracks important instructions and learned rules from previous sessions
 
 ## Core Rules
 
-- **Skill Creation**: Every skill MUST be created or updated using the `skill-creator` skill to ensure it follows the correct structure (YAML frontmatter, instructions, etc.) and includes necessary evaluations.
+- **Python Workflow**: When working with Python:
+  1. Check if a `.venv` directory exists in the project root.
+    2. If it exists, use it for all Python commands.
+  3. If it does not exist, ask the user whether to create one in the project root or use a different path.
+  4. Always use the active virtual environment for executing Python scripts and running `pip install`.
+
+- **Git & Tool Usage**:
+  - **Git-Commit Skill**: You are authorized to use the `git-commit` skill for any Git repository within the workspace, regardless of its location.
+  - **Directory Context**: If the target repository is in a subdirectory (e.g., `./wiki`), you should first change the working directory using `cd <path>` (or use `workdir` in tools) so that the skill operates correctly within that repo's context.
+  - **Direct Execution**: Do not restrict yourself to the current working directory only; prioritize using specialized tools (like `git-commit`) over raw `bash` whenever possible by managing the context.
+
+## Session Logs
+...
 
 ## Session Logs
 

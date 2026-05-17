@@ -28,14 +28,49 @@ When the user wants to commit changes:
     - `style`: Formatting or white-space changes.
 3. **Stage and Commit per Category**: For each category that has changes:
     - `git add <files>`
-    - Draft a professional commit message: `<type>(<scope>): <description>`
+    - Draft a professional commit message using the detailed format:
+      <type>(<scope>): <brief title>
+
+      <description>
+
+      <change rationale>
+
+      <what have been tested>
+
+      <sign>
     - Execute `git commit -m "<message>"`
 4. **Verification**: Run `git status` to ensure no changes are left.
 5. **Report Success**: Provide a summary of how many commits were created and their messages.
 
 ## Commit Message Format
-**Template:** `<type>(<scope>): <description>`
+**Template:**
+<type>(<scope>): <brief title>
+
+<description>
+
+<change rationale>
+
+<what have been/to be tested>
+
+<sign>
 
 **Examples:**
 - `feat(auth): implement JWT-based authentication`
+  
+  Implement JWT-based authentication for the auth module.
+  
+  Added endpoints for login/logout and integrated with the user service.
+  
+  Tested with manual API calls and unit tests.
+  
+  [opencode-agent]
+
 - `docs(readme): update installation instructions`
+
+  Update the installation instructions in the README.
+  
+  Added steps for setting up environment variables.
+  
+  Verified the steps by following them in a new container.
+  
+  [opencode-agent]`
