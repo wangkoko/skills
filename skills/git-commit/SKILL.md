@@ -3,6 +3,11 @@ name: git-commit
 description: Use this skill whenever you want to commit changes to a Git repository using the Conventional Commits standard. This skill is particularly useful when you have untracked or unstaged files and want to group them into logical categories like feat, fix, docs, chore, refactor, test, or style to maintain a clean and structured commit history. Make sure to use this skill whenever you see changes in `git status` and want to organize them into professional, structured commits.
 ---
 
+---
+description: A skill for committing changes using the Conventional Commit standard, grouping files by category.
+mode: skill
+---
+
 # git-commit
 
 A skill for committing changes using the Conventional Commits standard, grouping files by category.
@@ -17,8 +22,9 @@ A skill for committing changes using the Conventional Commits standard, grouping
 
 When the user wants to commit changes:
 
-1. **Identify Changes**: Run `git status -s` to see all untogthered and unstaged files.
-2. **Classify Files**: Group the files into logical categories based on their purpose:
+1. **Identify Changes**: Run `git status -s` to see all untracked and unstaged files.
+2. **Handle Sub-repositories**: If the changes are in a sub-repository (e.g., `.opencode/`), ensure you use the `workdir` parameter or `cd` into that directory before executing git commands.
+3. **Classify Files**: Group the files into logical categories based on their purpose:
     - `feat`: New functionality.
     - `fix`: Bug fixes.
     - `docs`: Documentation changes.
@@ -26,7 +32,7 @@ When the user wants to commit changes:
     - `test`: Test additions or updates.
     - `chore`: Maintenance, dependencies, or build processes.
     - `style`: Formatting or white-space changes.
-3. **Stage and Commit per Category**: For each category that has changes:
+4. **Stage and Commit per Category**: For each category that has changes:
     - `git add <files>`
     - Draft a professional commit message using the detailed format:
       <type>(<scope>): <brief title>
@@ -39,14 +45,8 @@ When the user wants to commit changes:
 
       <sign>
     - Execute `git commit -m "<message>"`
-4. **Push Changes (Ask User)**:
-    - Before pushing, ask the user: "Would you like me to push the changes
-      now, or will you do it manually later?"
-    - If the user says "push now":
-      - `git push`
-      - Report success.
-    - If the user says "manual later":
-      - Stop and report that the changes are ready for manual push.
+5. **Verification**: Run `git status` to ensure no changes are left and the working tree is clean.
+6. **Report Success**: Provide a summary of how many commits were created and their messages.
 
 ## Commit Message Format
 **Template:**
