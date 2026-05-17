@@ -39,8 +39,13 @@ When the user wants to commit changes:
 
       <sign>
     - Execute `git commit -m "<message>"`
-4. **Verification**: Run `git status` to ensure no changes are left.
-5. **Report Success**: Provide a summary of how many commits were created and their messages.
+4. **Push Changes (Ask User)**:
+    - Before pushing, ask the user: "Would you like me to push the changes now, or will you do it manually later?"
+    - If the user says "push now":
+      - `git push`
+      - Report success.
+    - If the user says "manual later":
+      - Stop and report that the changes are ready for manual push.
 
 ## Commit Message Format
 **Template:**
