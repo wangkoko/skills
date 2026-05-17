@@ -40,7 +40,8 @@ When the user wants to commit changes:
       <sign>
     - Execute `git commit -m "<message>"`
 4. **Push Changes (Ask User)**:
-    - Before pushing, ask the user: "Would you like me to push the changes now, or will you do it manually later?"
+    - Before pushing, ask the user: "Would you like me to push the changes
+      now, or will you do it manually later?"
     - If the user says "push now":
       - `git push`
       - Report success.
