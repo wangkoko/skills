@@ -7,6 +7,9 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
+        "qwen3.6:27b": {
+          "tools": true
+        },
         "qwen3.6:27b-mlx-bf16": {
           "tools": true
         },
